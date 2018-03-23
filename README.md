@@ -5,6 +5,10 @@
 <p align="justify">Com base neste projetos as equipes de desenvolvimento da Conab poderão clonar e iniciar rapidamente um projeto web com tecnologia Angular 5, tendo uma estrutura preparada para realização de autenticação baseada em nosso componente Autorization Server que utiliza tecnologia Oauth2, além de ter a disposição as camadas necessárias para produzir funcionalidades os desenvolvedores terão códigos de exemplos bem comentados para auxiliar no aprendizado durante o treinamento.</p>
 <p align="justify">Este projeto faz parte de uma proposta maior idealizada para implantar uma arquitetura corporativa baseada em micro serviços na Companhia, provendo escalabilidade, robustez e principalmente segurança e proteção aos serviços baseado em REST produzidos no ambito corporativo.</p>
  
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_principal.png">
+</p>
+ 
 ## PROCEDIMENTOS PARA SUA UTILIZAÇÃO
 
 ### Baixando e incluindo dependências
