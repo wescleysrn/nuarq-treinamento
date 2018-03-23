@@ -22,7 +22,7 @@
 <p align="justify">O desenvolvedor deverá realizar login de acesso, informando para isso um usuário e senha válido constante na base LDAP de desenvolvimento da Companhia, conforme mostrado na imagem a seguir:</p>
 
 <p align="center">
-  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_login.png">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_login_acesso.png">
 </p>
 
 ### Gerando funcionalidades
@@ -42,7 +42,7 @@
 <p align="justify">Mais detalhes será monstrado durante o treinamento. Abaixo podemos vê o trecho de configuração do plugin no arquivo pom.xml mencionado.</p>
 
 <p align="center">
-  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_plugin_deploy.png">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_plugin_deploy_yarn.png">
 </p>
 
 <p align="justify">O .war poderá ser publicado no servidor de aplicação da Companhia mediante procedimento normal de deploy dos resources server's Java.</p>
