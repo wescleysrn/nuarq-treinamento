@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<groupId>br.gov.conab.treinamento</groupId>
+	<artifactId>treinamento-web</artifactId>
+    <version>1.0.0</version>
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>war</packaging>
+	<name>treinamento-web</name>
+	<description>Projeto web de treinamento Conab-NUARQ</description>
+  
+	<properties>
+		<main.basedir>${project.parent.basedir}</main.basedir>
+		<checkstyle.skip>true</checkstyle.skip>
+	</properties>
+
+  <build>
+	<finalName>treinamento-web</finalName>  
+    <resources>
+      <resource>
+        <directory>ui-src</directory>
+      </resource>
+    </resources>
+    <plugins>
+	  <plugin>
+	  	<groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-war-plugin</artifactId>
+	    <version>3.2.0</version>
+        <configuration>
+        	<failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>	    
+	  </plugin>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.6</version>
+        <configuration>
+          <nodeVersion>v8.5.0</nodeVersion>
+          <yarnVersion>v1.3.2</yarnVersion>
+        </configuration>
+        <executions>
+          <execution>
+            <id>install node and yarn</id>
+            <goals>
+              <goal>install-node-and-yarn</goal>
+            </goals>
+            <phase>generate-resources</phase>
+          </execution>
+          <execution>
+            <id>yarn install</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
+		  <!--
+          <execution>
+            <id>yarn lint</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>lint</arguments>
+            </configuration>
+          </execution>
+		  -->
+          <execution>
+            <id>yarn build</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <arguments>build</arguments>
+            </configuration>
+          </execution>
+		  <!--
+          <execution>
+            <id>yarn test</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <phase>test</phase>
+            <configuration>
+              <arguments>test</arguments>
+              <failOnError>true</failOnError>
+            </configuration>
+          </execution>
+		  -->
+        </executions>
+      </plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>2.4.2</version>
+			<executions>
+				<execution>
+					<id>default-copy-resources</id>
+					<phase>process-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<overwrite>true</overwrite>
+						<outputDirectory>${project.build.directory}/${project.artifactId}/</outputDirectory>
+						<resources>
+							<resource>
+								<directory>${project.basedir}/ui-src/</directory>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+    </plugins>
+  </build>
+
+</project>
