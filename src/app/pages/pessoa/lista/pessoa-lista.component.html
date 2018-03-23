@@ -1,0 +1,60 @@
+<section>
+    <div class="page-heading">
+        <h1 class="page-title">Listagem de Pessoas</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html"><i class="la la-home font-20"></i></a>
+            </li>
+        </ol>
+    </div>
+    <div class="page-content fade-in-up">
+        <div class="row">
+            <div class="col-xl-12">
+                <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+                <div class="ibox">
+                    <div class="ibox-head">
+                        <div class="ibox-title">Listagem de Pessoas</div>
+                    </div>
+                    <div class="ibox-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="50px"></th>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>E-mail</th>
+                                        <th>Data Inclusão</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody *ngIf="pagina.content?.length == 0"><tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">Não foi encontrado registros...</td></tr></tbody>
+                                <tbody *ngIf="pagina.content?.length > 0">
+                                    <tr *ngFor="let registro of pagina.content">
+                                        <td>
+                                            <img class="img-circle" src="./assets/img/users/u1.jpg" style="width:40px;" />
+                                        </td>
+                                        <td>{{registro.nome}}</td>
+                                        <td>{{registro.cpf}}</td>
+                                        <td>{{registro.email}}</td>
+                                        <td>{{registro.dataNascimento}}</td>
+                                        <td>
+                                            <button (click)="editar(registro.id)" class="btn btn-success btn-xs m-r-5" data-toggle="tooltip" data-original-title="Editar"><i class="fa fa-pencil font-14"></i></button>
+                                            <button (click)="excluir(registro.id)" class="btn btn-danger btn-xs" data-toggle="tooltip" data-original-title="Deletar"><i class="fa fa-trash font-14"></i></button>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="ibox-body">
+                        <div class="form-group">
+                            <button routerLink="/pessoa/formulario" class="btn btn-success">Novo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

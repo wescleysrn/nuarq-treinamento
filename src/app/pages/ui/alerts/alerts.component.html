@@ -1,0 +1,90 @@
+<div class="page-heading">
+    <h1 class="page-title">Alertas e Tooltips</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Alertas</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                        <a class="fullscreen-link"><i class="fa fa-expand"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="alert alert-success"><strong>Sucesso!</strong> Você leu com sucesso esta importante mensagem de alerta.
+                        <a class="alert-link" href="javascript:;">Link Alerta</a>
+                    </div>
+                    <div class="alert alert-info"><strong>Informação!</strong> Esse alerta precisa da sua atenção, mas não é super importante.
+                        <a class="alert-link" href="javascript:;">Link Alerta</a>
+                    </div>
+                    <div class="alert alert-warning"><strong>Atenção!</strong> Melhor verificar a si mesmo, você não está muito bem.
+                        <a class="alert-link" href="javascript:;">Link Alerta</a>
+                    </div>
+                    <div class="alert alert-danger"><strong>Perigo!</strong> Mude algumas coisas e tente enviar novamente.
+                        <a class="alert-link" href="javascript:;">Link Alerta</a>
+                    </div>
+                    <h5 class="m-t-10 m-b-10">Dispensando</h5>
+                    <div class="alert alert-success alert-dismissable fade show">
+                        <button class="close" data-dismiss="alert" aria-label="Close">×</button><strong>Success!</strong> Você leu com sucesso esta importante mensagem de alerta.</div>
+                    <div class="alert alert-warning alert-dismissable fade show">
+                        <button class="close" data-dismiss="alert" aria-label="Close">×</button><strong>Warning!</strong> Melhor verificar a si mesmo, você não está muito bem.</div>
+                    <h5 class="m-t-10 m-b-10">Cercado</h5>
+                    <div class="alert alert-danger alert-bordered"><strong>Ohh!</strong> Mude algumas coisas e tente enviar novamente.</div>
+                    <div class="alert alert-success alert-bordered"><strong>Ohh!</strong> Mude algumas coisas e tente enviar novamente.</div>
+                    <div class="alert alert-warning alert-bordered-right"><strong>Ohh!</strong> Mude algumas coisas e tente enviar novamente.</div>
+                    <h5 class="m-t-10 m-b-10">Conteúdo Adicional</h5>
+                    <div class="alert alert-info alert-dismissable fade show">
+                        <button class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4>Olá!</h4>
+                        <p>Ohh yeah, você leu com sucesso esta importante mensagem de alerta. Este texto de exemplo será executado um pouco mais para que você possa ver como o espaçamento dentro de um alerta funciona com esse tipo de conteúdo.</p>
+                        <p>
+                            <button class="btn btn-success">eu concordo</button>
+                            <button class="btn btn-warning">Cancelar</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Tooltips e Popovers</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item">opção 1</a>
+                            <a class="dropdown-item">opção 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <button class="btn btn-default m-r-5 m-b-5" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Esquerda</button>
+                    <button class="btn btn-default m-r-5 m-b-5" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Topo</button>
+                    <button class="btn btn-default m-r-5 m-b-5" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Abaixo</button>
+                    <button class="btn btn-default m-r-5 m-b-5" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Direita</button>
+                    <button class="btn btn-default m-b-5" data-toggle="tooltip" data-html="true" title="&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;">Com HTML</button><br><br>
+                    <button class="btn btn-default m-r-5 m-b-5" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Clickable Tooltip">Clique no tooltip</button>
+                    <button class="btn btn-default m-b-5" data-toggle="tooltip" data-placement="top" data-html="true" title="&lt;img src='../assets/img/demo/users/u1.jpg' width='35px'&gt;">Com Icones</button>
+                    <h5 class="m-t-10 m-b-10">Popovers</h5>
+                    <button class="btn btn-info m-r-5 m-b-5" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover flutuante</button>
+                    <button class="btn btn-info m-r-5 m-b-5" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover desabilitável</button>
+                    <button class="btn btn-info m-b-5" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover Clicável</button><br><br>
+                    <button class="btn btn-info m-r-5 m-b-5" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Topo</button>
+                    <button class="btn btn-info m-r-5 m-b-5" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Direita</button>
+                    <button class="btn btn-info m-r-5 m-b-5" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vivamussagittis lacus vel augue laoreet rutrum faucibus.">Abaixo</button>
+                    <button class="btn btn-info m-b-5" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Esquerda</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

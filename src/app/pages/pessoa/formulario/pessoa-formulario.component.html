@@ -1,0 +1,112 @@
+<section>
+    <div class="page-heading">
+        <h1 class="page-title">Cadastro de Pessoa</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html"><i class="la la-home font-20"></i></a>
+            </li>
+        </ol>
+    </div>
+    <div class="page-content fade-in-up">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">                                
+                    <div class="ibox">
+                        <div class="ibox-head">
+                            <div class="ibox-title">Dados Pessoais</div>
+                            <div class="ibox-tools">
+                                <a class="fullscreen-link"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="row">
+                                <div class="col-sm-6 form-group" [ngClass]="displayFieldCss('nome')">
+                                    <label>Nome</label>
+                                    <input class="form-control" type="text" placeholder="Nome" formControlName="nome">
+                                    <app-control-messages color="danger" [control]="form.controls.nome"></app-control-messages>
+                                </div>
+                                <div class="col-sm-6 form-group" [ngClass]="displayFieldCss('cpf')">
+                                    <label>CPF</label>
+                                    <input class="form-control" type="text" placeholder="CPF" formControlName="cpf">
+                                    <app-control-messages color="danger" [control]="form.controls.cpf"></app-control-messages>
+                                </div>
+                            </div>
+                            <div class="form-group" [ngClass]="displayFieldCss('email')">
+                                <label>E-mail</label>
+                                <input class="form-control" type="text" placeholder="Endereço de E-mail" formControlName="email">
+                                <app-control-messages color="danger" [control]="form.controls.email"></app-control-messages>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3 form-group" [ngClass]="displayFieldCss('login')">
+                                    <label>Login</label>
+                                    <input class="form-control" type="text" placeholder="Nome de usuário" formControlName="login">
+                                    <app-control-messages color="danger" [control]="form.controls.login"></app-control-messages>
+                                </div>
+                                <div class="col-sm-3 form-group" [ngClass]="displayFieldCss('senha')">
+                                    <label>Senha</label>
+                                    <input class="form-control" type="password" placeholder="Senha" formControlName="senha">
+                                    <app-control-messages color="danger" [control]="form.controls.senha"></app-control-messages>
+                                </div>
+                                <div class="col-sm-3 form-group" [ngClass]="displayFieldCss('telefone')">
+                                    <label>Telefone</label>
+                                    <input class="form-control" type="text" placeholder="Telefone" formControlName="telefone">
+                                    <app-control-messages color="danger" [control]="form.controls.telefone"></app-control-messages>
+                                </div>
+                                <div class="col-sm-3 form-group" [ngClass]="displayFieldCss('dataNascimento')">
+                                    <label>Data Nascimento</label>
+                                    <input class="form-control" type="text" placeholder="Data de Nascimento" formControlName="dataNascimento">
+                                    <app-control-messages color="danger" [control]="form.controls.dataNascimento"></app-control-messages>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-head">
+                            <div class="ibox-title">Dados do Endereço</div>
+                        </div>
+                        <div class="ibox-body" formGroupName="endereco">
+                            <div class="row">
+                                <div class="col-sm-3 form-group" >
+                                    <label>CEP</label>
+                                    <input class="form-control" type="text" placeholder="CEP" formControlName="cep">
+                                </div>
+                                <div class="col-sm-9 form-group" >
+                                    <label>Logradouro</label>
+                                    <input class="form-control" type="text" placeholder="Logradouro" formControlName="logradouro">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-10 form-group" >
+                                    <label>Bairro</label>
+                                    <input class="form-control" type="text" placeholder="Bairro" formControlName="bairro">
+                                </div>
+                                <div class="col-sm-2 form-group" >
+                                    <label>Número</label>
+                                    <input class="form-control" type="text" placeholder="Número" formControlName="numero">
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label>Complemento</label>
+                                <input class="form-control" type="text" placeholder="Complemento" formControlName="complemento">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3 form-group" >
+                                    <label>UF</label>
+                                    <input class="form-control" type="text" placeholder="UF" formControlName="uf">
+                                </div>
+                                <div class="col-sm-9 form-group" >
+                                    <label>Cidade</label>
+                                    <input class="form-control" type="text" placeholder="Cidade" formControlName="cidade">
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="ibox-body">
+                            <div class="form-group">
+                                <button class="btn btn-success" type="submit">Salvar</button>
+                                <button class="btn btn-info" routerLink="/pessoa/">Cancelar</button>
+                            </div> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
