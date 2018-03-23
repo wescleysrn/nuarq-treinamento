@@ -49,6 +49,38 @@
 
 ## PRINCIPAIS FUNCIONALIDADES
 
+### Guardião das rotas
+
+<p align="justify">O guardião das rotas é um artefato que possibilita a verificação de permissão e autorização para cada recurso acessado na camada de apresentação, sendo que aqui neste repositório publico está incompleto, mas que seu funcionamento será tratado durante do treinamento. Este artefato é que é responsável por direcionar o usuário a tela de login, caso este não possua access token, ou para uma tela de não autorizado, caso um usuário devidamente autenticado tente acessar um recurso que não tenha acesso.</p>
+<p align="justify">A seguir é mostrado a imagem deste importante componente, curcial para o funcionamento dessa arquitetura:</p>
+
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_guardiao.png">
+</p>
+
+
+### Component display erro
+
+<p align="justify">O objetivo é exemplificar como podemos trabalhar a modularização de pequenos componentes para funçes comuns e rotineiras, esse componente é empregado em campos de formulário para que juntamente com a estrutura de form-padrao permite a indicação de validação de campo, tornando sua borda vermelha e apresentando a mensagem do erro.</p>
+<p align="justify">A seguir é mostrado a imagem do componente em questão:</p>
+
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_display_erro.png">
+</p>
+
+
+### Interceptor Oauth2
+
+<p align="justify">Talvez o componente central da proposta, o interceptor Oauth2 irá orquestrar o funcionamento da aplicação, servindo como proteção aos recursos do sistema, realizando tarefas como refresh token, tela de bloqueio e tratamento de exceções.</p>
+
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_interceptor.png">
+</p>
+
+### Caso de uso Pessoa
+
+<p align="justify">O caso de uso Pessoa, percorre todas as camadas do projeto até a realização de chamadas a API rest do nosso projeto resource server deste treinamento, sendo um bom exemplo para produção dos demais exercicios durante o treinamento.</p>
+
 ## CONCLUSÃO
 
 <p align="justify">Este projeto embora facilite o inicio dos trabalhos, deverá ser melhorado e versionado em repositório privado da Companhia, passando por serviços de melhoria do designer, aplicando identidade visual, publicação de artefatos de dependências em nosso servidor CDN, trabalhos de definições de projetos de dependências a serem utilizados, entre outros.</p>
