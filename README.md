@@ -1,4 +1,4 @@
-# ARQUITETURA BÁSICA PARA TREINAMENTO ANGULAR 5 - CONAB-NUARQ 
+# NUARQ/CONAB - TREINAMENTO ANGULAR 5 
 ## DESCRIÇÃO GERAL
 
 <p align="justify">O objetivo deste projeto é servir como started project para o treinamento Angular 5, realizado pelo Núcelo de Arquitetura e Inovação da Conab - Companhia Nacional de Abastecimento, uma empresa pública brasileira vinculada ao Ministerio da Agricultura.</p>
@@ -13,11 +13,17 @@
 
 ### Baixando e incluindo dependências
 
-
-
+<p align="justify">Para iniciar o treinamento o desenvolvedor deve baixar o started project deste repositório, por meio do comando `git clone https://github.com/wescleysrn/nuarq-treinamento.git treinamento`, via terminal. Após baixar e acessar a pasta do projeto deve-se rodar o comando `npm install` para gerar as dependências necessárias para o projeto.</p>
+<p align="justify">Após baixar o started project e instalar as dependências o desenvolvedor deve editar o arquivo constante em src/app/shared/util/api.util.ts com os caminhos de host's e credenciais de API-KEY que será informado por um membro da NUARQ.</p>
+ 
 ### Rodando o projeto
 
 <p align="justify">Uma vez baixado e instalado as dependências, basta executar o comando `ng serve` para rodar o projeto que ficará disponível no contexto `http://localhost:4200/`, assim qualquer alteração realizada no projeto irá refletir automaticamente na visualização no browser.</p>
+<p align="justify">O desenvolvedor deverá realizar login de acesso, informando para isso um usuário e senha válido constante na base LDAP de desenvolvimento da Companhia, conforme mostrado na imagem a seguir:</p>
+
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_login.png">
+</p>
 
 ### Gerando funcionalidades
 
@@ -32,7 +38,14 @@
 
 ### Realizando Deploy
 
+<p align="justify">O procedimento de deploy será realizado por meio do plugin `frontend-maven-plugin` que possibilita a execução de serviços como o [YARN](https://yarnpkg.com/) que está sendo usado para geração de .war do projeto. Pode ser verificado que o projeto possue um arquivo pom.xml em sua raiz para esse proposito, sendo que o plugin em conjunto com o YARN executa o comando `ng build --prod`.</p>
+<p align="justify">Mais detalhes será monstrado durante o treinamento. Abaixo podemos vê o trecho de configuração do plugin no arquivo pom.xml mencionado.</p>
 
+<p align="center">
+  <img src="https://github.com/wescleysrn/mestradounb/blob/master/imagens/treinamento-nuarq/tela_plugin_deploy.png">
+</p>
+
+<p align="justify">O .war poderá ser publicado no servidor de aplicação da Companhia mediante procedimento normal de deploy dos resources server's Java.</p>
 
 ## PRINCIPAIS FUNCIONALIDADES
 
