@@ -1,0 +1,45 @@
+<div class="content">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+    <div class="brand">
+        <a class="link" routerLink="/index" style="font-size: xx-large;">NUARQ - Treinamento</a>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2 class="login-title">ACESSO</h2>
+        <div class="form-group">
+            <div class="input-group-icon right" [ngClass]="displayFieldCss('login')">
+                <div class="input-icon"><i class="fa fa-user"></i></div>
+                <input class="form-control" type="email" formControlName="login" placeholder="Usuário" autocomplete="off">
+                <app-control-messages color="danger" [control]="form.controls.login"></app-control-messages>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group-icon right" [ngClass]="displayFieldCss('password')">
+                <div class="input-icon"><i class="fa fa-lock font-16"></i></div>
+                <input class="form-control" type="password" formControlName="password" placeholder="Password">
+                <app-control-messages color="danger" [control]="form.controls.password"></app-control-messages>
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <label class="ui-checkbox ui-checkbox-info">
+                <input type="checkbox">
+                <span class="input-span"></span>Lembre-me</label>
+            <a>Esqueceu a senha ?</a>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info btn-block" type="submit">Acessar</button>
+        </div>
+        <div class="social-auth-hr">
+            <span>Ou faça login com</span>
+        </div>
+        <div class="text-center social-auth m-b-20">
+            <a class="btn btn-social-icon btn-twitter m-r-5" href="javascript:;"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-social-icon btn-facebook m-r-5" href="javascript:;"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-social-icon btn-google m-r-5" href="javascript:;"><i class="fa fa-google-plus"></i></a>
+            <a class="btn btn-social-icon btn-linkedin m-r-5" href="javascript:;"><i class="fa fa-linkedin"></i></a>
+            <a class="btn btn-social-icon btn-vk" href="javascript:;"><i class="fa fa-vk"></i></a>
+        </div>
+        <div class="text-center">Não possue cadastro ?
+            <a class="color-blue">Criar uma conta</a>
+        </div>        
+    </form>
+</div>
